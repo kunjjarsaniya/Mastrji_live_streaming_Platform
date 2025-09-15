@@ -7,6 +7,7 @@ import "@stream-io/video-react-sdk/dist/css/styles.css";
 import "react-datepicker/dist/react-datepicker.css";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import router from "next/router";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +28,7 @@ export default function RootLayout({
         appearance={{
           layout: {
             socialButtonsVariant: "iconButton",
-            logoImageUrl: "/icons/yoom-logo.svg",
+            logoImageUrl: "/icons/mastrji-logo.svg",
           },
           variables: {
             colorText: "#fff",
@@ -37,6 +38,10 @@ export default function RootLayout({
             colorInputText: "#fff",
           },
         }}
+        signInUrl="/sign-in"
+        signUpUrl="/sign-up"
+        afterSignInUrl="/dashboard"
+        afterSignUpUrl="/dashboard"
       >
         <body className={`${inter.className} bg-dark-2`}>
           <Toaster />
